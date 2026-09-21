@@ -1,7 +1,27 @@
-*{
+:root {
+    --wa-green-dark: #075e54;
+    --wa-green: #00a884;
+    --wa-bg: #ffffff;
+    --wa-hover: #f5f6f6;
+    --wa-border: #e9edef;
+    --wa-text-primary: #111b21;
+    --wa-text-secondary: #667781;
+    --wa-badge: #25d366;
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html, body, #root {
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .pantalla-chat {
@@ -9,7 +29,6 @@
     padding: 20px;
     min-height: 400px;
 }
-
 
 .modal-container{
     position: fixed;
@@ -44,12 +63,15 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 50px;
-    height: 50px;
+    width: 49px;
+    height: 49px;
     border-radius: 50%;
     overflow: hidden;
+    flex-shrink: 0;
 }
 
 .imagen-contacto{
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

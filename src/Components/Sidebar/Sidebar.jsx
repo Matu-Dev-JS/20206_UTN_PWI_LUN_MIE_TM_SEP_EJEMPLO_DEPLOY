@@ -3,6 +3,7 @@ import React, { useContext } from "react"
 import { Link } from "react-router"
 import ContactOption from "../ConctactOption/ContactOption"
 import { ContactContext } from "../../Context/ContactContext"
+import "./Sidebar.css"
 
 export default function Sidebar() {
 
@@ -53,7 +54,6 @@ export default function Sidebar() {
             <Link
                 to={`/contact/${contacto.id}`}
                 key={contacto.id}
-                style={{ textDecoration: "none", color: "inherit" }}
             >
                 <ContactOption
                     id={contacto.id}
@@ -68,8 +68,15 @@ export default function Sidebar() {
         )
     }
     return (
-        <div>
-            {contactos_jsx}
+        <div className="sidebar">
+            <div className="sidebar-header">
+                <div className="sidebar-search">
+                    <input type="text" placeholder="Buscar o empezar un nuevo chat" />
+                </div>
+            </div>
+            <div className="sidebar-contacts">
+                {contactos_jsx}
+            </div>
         </div>
     )
 }

@@ -1,0 +1,56 @@
+.sidebar {
+    width: 350px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--wa-bg);
+    border-right: 1px solid var(--wa-border);
+}
+
+.sidebar-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 16px;
+    background-color: var(--wa-green);
+    gap: 10px;
+}
+
+.sidebar-search {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 0 12px;
+    height: 35px;
+}
+
+.sidebar-search input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    background: transparent;
+    padding: 0 8px;
+    color: var(--wa-text-primary);
+}
+
+.sidebar-search input::placeholder {
+    color: #667781;
+}
+
+.sidebar-contacts {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.sidebar-contacts::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sidebar-contacts::-webkit-scrollbar-thumb {
+    background-color: #cccccc;
+    border-radius: 3px;
+}
