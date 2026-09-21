@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
 import { useParams } from 'react-router'
 import Sidebar from '../../Components/Sidebar/Sidebar'
-import { ThemeContext } from '../../context/ThemeContext'
 import { LangContext } from '../../Context/LangContext'
 
 
