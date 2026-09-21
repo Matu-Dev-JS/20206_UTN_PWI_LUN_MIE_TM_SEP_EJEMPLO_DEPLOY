@@ -1,0 +1,79 @@
+.contenedor-mensaje {
+    display: flex;
+    width: 100%;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+}
+
+.mensaje-propio {
+    justify-content: flex-end;
+}
+
+.mensaje-recibido {
+    justify-content: flex-start;
+}
+
+.burbuja-mensaje {
+    max-width: 60%;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14.2px;
+    line-height: 1.4;
+    position: relative;
+    box-shadow: 0 1px 0.5px rgba(11, 20, 26, 0.13);
+}
+
+.mensaje-propio .burbuja-mensaje {
+    background-color: #d9fdd3; 
+    color: #111b21;
+    border-top-right-radius: 0px; 
+}
+
+.mensaje-recibido .burbuja-mensaje {
+    background-color: #ffffff; 
+    color: #111b21;
+    border-top-left-radius: 0px; 
+}
+
+.autor-mensaje {
+    display: block;
+    font-weight: 600;
+    font-size: 12.5px;
+    color: #53bdeb; 
+    margin-bottom: 2px;
+}
+
+.contenido-mensaje {
+    margin: 0;
+    word-wrap: break-word;
+}
+
+.metadatos-mensaje {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+    margin-top: 4px;
+    float: right;
+    margin-left: 12px;
+}
+
+.hora-mensaje {
+    font-size: 11px;
+    color: #667781;
+}
+
+.doble-check {
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+.doble-check.leido {
+    color: #53bdeb; 
+}
+
+.doble-check.enviado {
+    color: #8696a0; 
+}

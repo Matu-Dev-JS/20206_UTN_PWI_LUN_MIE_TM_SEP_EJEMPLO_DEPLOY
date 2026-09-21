@@ -1,0 +1,12 @@
+
+
+.product-card{
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(232, 211, 211);
+}
+
+.product-card--only-members{
+    background-color: rgb(173, 218, 237);
+}
