@@ -24,14 +24,15 @@ export default function App() {
 
 	return (
 		<Routes>
-			<Route path='/home' element={<HomeScreen />} />
 			<Route path='/login' element={<LoginScreen />} />
 
-			<Route path='*' element={<NotFoundScreen />} />
-			
 			<Route element={<ContactContextProvider/>} >
 				<Route 
 					path='/' 
+					element={<HomeScreen />} 
+				/>
+				<Route 
+					path='/home' 
 					element={<HomeScreen />} 
 				/>
 				<Route
@@ -39,6 +40,8 @@ export default function App() {
 					element={<ContactDetailScreen />}
 				/>
 			</Route>
+
+			<Route path='*' element={<NotFoundScreen />} />
 
 
 			<Route element={<ProductContextProvider/>}>
