@@ -3,6 +3,7 @@ import { Link } from 'react-router'
 import ContactOption from '../ConctactOption/ContactOption'
 import { ContactContext } from '../../Context/ContactContext'
 import useContactSearch from '../../hooks/useContactSearch'
+import { formatMessageDate } from '../../utils/formatDate'
 
 export default function ContactsList() {
 
@@ -16,6 +17,7 @@ export default function ContactsList() {
     const contactsJsx = []
     for (const contact of filteredContacts) {
         const lastMessage = getLastMessage(contact.messages)
+        const rawDate = lastMessage ? lastMessage.created_at : contact.last_connection
         contactsJsx.push(
             <Link
                 to={`/contact/${contact.id}`}
@@ -27,7 +29,7 @@ export default function ContactsList() {
                     lastMessage={lastMessage ? lastMessage.content : ''}
                     name={contact.name}
                     unreadMessages={countUnreadMessages(contact.messages)}
-                    lastMessageDate={lastMessage ? lastMessage.created_at : contact.last_connection}
+                    lastMessageDate={formatMessageDate(rawDate)}
                 />
             </Link>
         )

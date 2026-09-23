@@ -1,5 +1,6 @@
 import React from 'react'
 import './ContactOption.css'
+import { formatMessageDate } from '../../utils/formatDate'
 
 export default function ContactOption(props) {
   return (
@@ -15,7 +16,7 @@ export default function ContactOption(props) {
             <p className="contact-preview">{props.lastMessage}</p>
         </div>
         <div className="contact-meta">
-            <span className="contact-time">{props.lastMessageDate}</span>
+            <span className="contact-time">{formatMessageDate(props.lastMessageDate)}</span>
             {props.unreadMessages && (
                 <span className="contact-badge">{props.unreadMessages}</span>
             )}
