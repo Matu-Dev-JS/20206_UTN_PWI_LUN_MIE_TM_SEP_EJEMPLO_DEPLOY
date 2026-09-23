@@ -19,11 +19,31 @@ Paso 2:
 
 import { createContext, useState } from "react";
 import { Outlet } from "react-router";
-export const ContactContext = createContext()
+
+export function getLastMessage(messages) {
+    if (!messages || messages.length === 0) return null
+    return messages[messages.length - 1]
+}
+
+export function countUnreadMessages(messages) {
+    if (!messages) return null
+    const unread = messages.filter((m) => m.status === 'unseen').length
+    return unread > 0 ? unread : null
+}
+
+export const ContactContext = createContext(
+    {
+        contacts: [],
+        getLastMessage: () => {},
+        countUnreadMessages: () => {},
+    }
+)
 export function ContactContextProvider() {
     const [contacts, setContacts] = useState(contact_list_server)
     const provider_values = {
         contacts: contacts,
+        getLastMessage: getLastMessage,
+        countUnreadMessages: countUnreadMessages,
     } 
 
     return (

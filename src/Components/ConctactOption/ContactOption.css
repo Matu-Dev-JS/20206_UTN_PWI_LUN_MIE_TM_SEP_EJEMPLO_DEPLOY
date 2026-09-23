@@ -63,3 +63,15 @@
     font-size: 11px;
     font-weight: 500;
 }
+
+.contact-image-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--wa-green-dark);
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 500;
+}
