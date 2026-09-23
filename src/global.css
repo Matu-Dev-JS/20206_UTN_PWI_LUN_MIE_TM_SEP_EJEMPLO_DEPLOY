@@ -7,12 +7,14 @@
     --wa-text-primary: #111b21;
     --wa-text-secondary: #667781;
     --wa-badge: #25d366;
+    --wa-font: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: var(--wa-font);
 }
 
 html, body, #root {
